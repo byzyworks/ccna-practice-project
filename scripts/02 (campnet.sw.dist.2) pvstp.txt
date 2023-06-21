@@ -1,0 +1,10 @@
+configure terminal
+
+spanning-tree vlan 120,140,160 root primary
+
+interface GigabitEthernet 0/2
+spanning-tree portfast
+spanning-tree guard root
+spanning-tree bpduguard enable
+
+end

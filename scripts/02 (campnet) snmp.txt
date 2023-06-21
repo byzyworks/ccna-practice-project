@@ -1,0 +1,9 @@
+configure terminal
+
+! Packet Tracer doesn't support SNMP traps
+! All monitoring is from manager to node via. MIB browser
+
+snmp-server community CampNetRO ro
+snmp-server community CampNetRW rw
+
+end

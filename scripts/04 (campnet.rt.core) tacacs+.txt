@@ -1,0 +1,15 @@
+configure terminal
+
+aaa new-model
+
+tacacs-server host 10.0.11.20 key ccna200-301
+tacacs-server key ccna200-301
+
+aaa authentication login CampusAAA group tacacs+ local
+aaa authorization exec default group tacacs+
+aaa accounting exec default start-stop group tacacs+
+
+line vty 0 15
+login authentication CampusAAA
+
+end

@@ -1,0 +1,17 @@
+configure terminal
+
+interface Port-channel2
+switchport mode trunk
+switchport trunk native vlan 999
+switchport trunk allowed vlan 1,100,110,120,130,140,150,160
+switchport nonegotiate
+no shutdown
+
+interface Port-channel3
+switchport mode trunk
+switchport trunk native vlan 999
+switchport trunk allowed vlan 1,100,110,120,130,140,150,160
+switchport nonegotiate
+no shutdown
+
+end

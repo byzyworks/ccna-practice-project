@@ -1,0 +1,10 @@
+configure terminal
+
+interface loopback 0
+ip address 10.0.1.1 255.255.255.0
+ipv6 enable
+ipv6 address fd51:fd0c:4932:06d2:4a01:1ba8:61ec:b3d4/64
+ipv6 address fe80::d150:f0b4:0355:1ccd link-local
+no shutdown
+
+end

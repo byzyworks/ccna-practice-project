@@ -1,0 +1,5 @@
+configure terminal
+
+hostname fl03-sw-1
+
+end

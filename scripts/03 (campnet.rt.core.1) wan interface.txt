@@ -1,0 +1,11 @@
+configure terminal
+
+interface GigabitEthernet 0/0
+description "WAN interface"
+ip address 123.45.67.90 255.255.255.0
+ipv6 enable
+ipv6 address 2001:8cc7:0ed7:73a1:1841:d330:8af3:de38/64
+ipv6 address fe80::ca8a:a303:1928:4b7b link-local
+no shutdown
+
+end

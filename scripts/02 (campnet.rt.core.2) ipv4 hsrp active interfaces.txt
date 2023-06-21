@@ -1,0 +1,15 @@
+configure terminal
+
+interface GigabitEthernet 0/2.120
+standby 1 priority 110
+standby 1 preempt
+
+interface GigabitEthernet 0/2.140
+standby 1 priority 110
+standby 1 preempt
+
+interface GigabitEthernet 0/2.160
+standby 1 priority 110
+standby 1 preempt
+
+end

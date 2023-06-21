@@ -1,0 +1,45 @@
+configure terminal
+
+interface GigabitEthernet 0/1
+switchport mode trunk
+switchport trunk native vlan 999
+switchport trunk allowed vlan 1,100,110,120,130,140,150,160
+switchport nonegotiate
+no switchport port-security
+no switchport port-security mac-address sticky
+no shutdown
+
+interface Port-channel1
+switchport mode trunk
+switchport trunk native vlan 999
+switchport trunk allowed vlan 1,100,110,120,130,140,150,160
+switchport nonegotiate
+no shutdown
+
+interface Port-channel2
+description "fl01-sw-1 link"
+
+interface Port-channel3
+description "fl01-sw-2 link"
+
+interface FastEthernet 0/17
+description "fl02-sw-1 link"
+switchport mode trunk
+switchport trunk native vlan 999
+switchport trunk allowed vlan 1,130
+switchport nonegotiate
+no switchport port-security
+no switchport port-security mac-address sticky
+no shutdown
+
+interface FastEthernet 0/18
+description "fl03-sw-1 link"
+switchport mode trunk
+switchport trunk native vlan 999
+switchport trunk allowed vlan 1,230
+switchport nonegotiate
+no switchport port-security
+no switchport port-security mac-address sticky
+no shutdown
+
+end

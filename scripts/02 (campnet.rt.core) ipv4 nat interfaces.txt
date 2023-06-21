@@ -1,0 +1,9 @@
+configure terminal
+
+interface GigabitEthernet 0/0
+ip nat outside
+
+interface range GigabitEthernet 0/1 - 2
+ip nat inside
+
+end

@@ -1,0 +1,32 @@
+configure terminal
+
+! Anycast is used in place of HSRP for IPv6
+
+interface GigabitEthernet 0/0
+ipv6 address 2001:8cc7:0ed7:73a1:7720:e1a8:295e:ebe2/64 anycast
+
+interface GigabitEthernet 0/2.1
+ipv6 address fd51:fd0c:4932:e75f:bc0b:e946:b38d:97c1/64 anycast
+
+interface GigabitEthernet 0/2.100
+ipv6 address 2001:f7a7:9790:6add:a475:3fe1:fa21:fa37/64 anycast
+
+interface GigabitEthernet 0/2.110
+ipv6 address fd51:fd0c:4932:de2a:6400:dcda:5e0e:ff1f/64 anycast
+
+interface GigabitEthernet 0/2.120
+ipv6 address fd51:fd0c:4932:057e:2da8:d234:ca1b:f9d0/64 anycast
+
+interface GigabitEthernet 0/2.130
+ipv6 address 2001:f7a7:9790:544f:73cb:ca92:1471:bdf6/64 anycast
+
+interface GigabitEthernet 0/2.140
+ipv6 address 2001:f7a7:9790:af8b:af8d:25a8:29bf:c3fb/64 anycast
+
+interface GigabitEthernet 0/2.150
+ipv6 address fd51:fd0c:4932:8fd8:4e65:571d:df43:16d2/64 anycast
+
+interface GigabitEthernet 0/2.160
+ipv6 address 2001:f7a7:9790:8814:6876:72ef:4d74:58ce/64 anycast
+
+end

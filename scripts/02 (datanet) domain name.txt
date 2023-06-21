@@ -1,0 +1,5 @@
+configure terminal
+
+ip domain-name pvt.datanet.com
+
+end

@@ -1,0 +1,5 @@
+configure terminal
+
+hostname core-rt-2
+
+end

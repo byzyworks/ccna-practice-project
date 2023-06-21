@@ -1,0 +1,6 @@
+configure terminal
+
+vtp mode client
+vtp domain campnet
+
+end

@@ -1,0 +1,35 @@
+configure terminal
+
+interface GigabitEthernet 0/1
+description "virt-rt-1 link"
+switchport mode access
+switchport access vlan 150
+no shutdown
+
+interface FastEthernet 0/1
+description "fl01-lt-1 link"
+switchport mode access
+switchport access vlan 140
+no shutdown
+
+interface FastEthernet 0/2
+description "fl01-dt-1 link"
+switchport mode access
+switchport access vlan 130
+no shutdown
+
+interface FastEthernet 0/3
+description "pubz-sv-1 link"
+switchport mode access
+switchport access vlan 100
+no shutdown
+
+interface GigabitEthernet 0/2
+description "fl01-ap-1 link"
+switchport mode access
+switchport access vlan 120
+no switchport port-security
+no switchport port-security mac-address sticky
+no shutdown
+
+end
