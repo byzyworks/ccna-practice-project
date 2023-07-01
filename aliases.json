@@ -35,27 +35,27 @@
 		"all.not.isp",
 		"all.sw.c2960",
 		"campnet.sw.grp1",
-		"campnet.sw.accs"
+		"campnet.sw.accs.grp1"
 	],
 	[
 		"campnet.sw.fl01.2",
 		"all.not.isp",
 		"all.sw.c2960",
 		"campnet.sw.grp1",
-		"campnet.sw.accs"
+		"campnet.sw.accs.grp1"
 	],
 	[
 		"campnet.sw.fl02.1",
 		"all.not.isp",
 		"all.sw.c2960",
 		"campnet.sw.grp2",
-		"campnet.sw.accs"
+		"campnet.sw.accs.grp2"
 	],
 	[
 		"campnet.sw.fl03.1",
 		"all.not.isp",
 		"all.sw.c2960",
 		"campnet.sw.grp2",
-		"campnet.sw.accs"
+		"campnet.sw.accs.grp2"
 	]
 ]
