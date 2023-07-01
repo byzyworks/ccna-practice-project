@@ -1,5 +1,0 @@
-configure terminal
-
-ip default-gateway 123.45.67.1
-
-end

@@ -1,5 +1,0 @@
-configure terminal
-
-ip default-gateway 10.0.15.1
-
-end
