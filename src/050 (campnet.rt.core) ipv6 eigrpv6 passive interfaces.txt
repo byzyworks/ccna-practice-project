@@ -1,5 +1,4 @@
 ipv6 router eigrp 100
-redistribute static metric 100000 0 255 1 1500
 passive-interface GigabitEthernet0/0
 passive-interface GigabitEthernet0/2.1
 passive-interface GigabitEthernet0/2.100

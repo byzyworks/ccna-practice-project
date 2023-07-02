@@ -1,0 +1,3 @@
+ipv6 router eigrp 100
+eigrp router-id 3.3.3.3
+no shutdown
