@@ -1,5 +1,17 @@
 [
 	[
+		"default.rt.2911",
+		"all.rt.2911"
+	],
+	[
+		"default.sw.c3650",
+		"all.sw.c3650"
+	],
+	[
+		"default.sw.c2960",
+		"all.sw.c2960"
+	],
+	[
 		"isp.sw",
 		"all.sw.c3650"
 	],
