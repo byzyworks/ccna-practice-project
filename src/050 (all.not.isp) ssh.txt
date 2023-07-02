@@ -1,6 +1,7 @@
 username admin privilege 15 secret ccna200-301
 
-crypto key generate rsa
+crypto key generate rsa general-keys modulus 2048
+
 ip ssh time-out 60
 ip ssh authentication-retries 2
 
