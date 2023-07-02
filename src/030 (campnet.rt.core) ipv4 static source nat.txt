@@ -1,0 +1,2 @@
+! Static NAT is done just for main-sv-1
+ip nat inside source static 10.0.10.20 123.45.67.88

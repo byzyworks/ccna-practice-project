@@ -1,0 +1,41 @@
+interface GigabitEthernet 0/2.999
+description "default untagged RoaS interface (do not use)"
+encapsulation dot1Q 999 native
+shutdown
+
+interface GigabitEthernet 0/2.1
+description "administrative RoaS interface"
+no encapsulation dot1Q 1
+encapsulation dot1Q 1
+
+interface GigabitEthernet 0/2.100
+description "internet-accessible server RoaS interface"
+encapsulation dot1Q 100
+
+interface GigabitEthernet 0/2.110
+description "intranet-only server RoaS interface"
+encapsulation dot1Q 110
+
+interface GigabitEthernet 0/2.120
+description "WLAN management/administration RoaS interface"
+encapsulation dot1Q 120
+
+interface GigabitEthernet 0/2.130
+description "corporate-level access client RoaS interface"
+encapsulation dot1Q 130
+
+interface GigabitEthernet 0/2.140
+description "guest-level (internet-only) access client RoaS interface"
+encapsulation dot1Q 140
+
+interface GigabitEthernet 0/2.150
+description "lab network bridging RoaS interface"
+encapsulation dot1Q 150
+
+interface GigabitEthernet 0/2.160
+description "VOIP RoaS interface"
+encapsulation dot1Q 160
+
+interface GigabitEthernet 0/2
+description "LAN interface"
+no shutdown

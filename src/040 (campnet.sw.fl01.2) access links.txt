@@ -1,0 +1,25 @@
+interface FastEthernet 0/1
+description "intz-sv-1 link"
+switchport mode access
+switchport access vlan 110
+no shutdown
+
+interface FastEthernet 0/2
+description "VOIP link"
+switchport mode access
+switchport access vlan 160
+no shutdown
+
+interface FastEthernet 0/3
+description "fl01-dt-2 link"
+switchport mode access
+switchport access vlan 130
+no shutdown
+
+interface GigabitEthernet 0/2
+description "fl01-ap-2 link"
+switchport mode access
+switchport access vlan 120
+no switchport port-security
+no switchport port-security mac-address sticky
+no shutdown

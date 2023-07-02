@@ -1,6 +1,0 @@
-configure terminal
-
-interface FastEthernet 0/2
-switchport access vlan 1
-
-end

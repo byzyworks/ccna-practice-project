@@ -1,0 +1,5 @@
+ip routing
+ipv6 unicast-routing
+
+ip route 123.45.67.88 255.255.255.255 123.45.67.89
+ipv6 route 2001:f7a7:9790::/48 2001:8cc7:0ed7:73a1:7720:e1a8:295e:ebe2

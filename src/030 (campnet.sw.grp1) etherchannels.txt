@@ -1,0 +1,11 @@
+interface range FastEthernet 0/19 - 20
+channel-group 3 mode active
+no switchport port-security
+no switchport port-security mac-address sticky
+no shutdown
+
+interface range FastEthernet 0/21 - 22
+channel-group 2 mode active
+no switchport port-security
+no switchport port-security mac-address sticky
+no shutdown

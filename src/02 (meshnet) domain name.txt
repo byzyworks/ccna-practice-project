@@ -1,5 +1,0 @@
-configure terminal
-
-ip domain-name pvt.meshnet.com
-
-end

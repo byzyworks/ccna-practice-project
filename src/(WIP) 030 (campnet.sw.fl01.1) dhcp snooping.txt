@@ -1,0 +1,7 @@
+ip arp inspection vlan 1
+ip arp inspection vlan 100
+ip arp inspection vlan 110
+ip arp inspection vlan 120
+ip arp inspection vlan 130
+ip arp inspection vlan 140
+ip arp inspection vlan 150

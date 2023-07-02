@@ -1,8 +1,0 @@
-configure terminal
-
-ip domain-name campnet.com
-ip name-server 123.45.67.2
-ip name-server 2001:8cc7:ed7:73a1:c1b:d2f9:30bc:fc03
-ip domain-lookup
-
-end

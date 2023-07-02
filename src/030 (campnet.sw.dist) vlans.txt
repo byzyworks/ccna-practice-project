@@ -1,0 +1,18 @@
+vlan 1
+vlan 999
+name SecureDefault
+
+vlan 100
+name Public
+vlan 110
+name Internal
+vlan 120
+name WLANManage
+vlan 130
+name CorpoLAN
+vlan 140
+name GuestLAN
+vlan 150
+name Lab
+vlan 160
+name VOIP

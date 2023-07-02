@@ -1,7 +1,0 @@
-configure terminal
-
-! Packet Tracer doesn't allow for IPv6 NTP
-
-ntp server 123.45.67.2
-
-end

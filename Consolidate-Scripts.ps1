@@ -2,8 +2,8 @@ param (
 	[string]$CommentStart  = "!",    # Relevant when below is true.
 	[switch]$Disclaimerize = $false, # Outputs "helper comments" and warnings against editing each destination script.
 	[string]$Extension     = ".txt", # File extension of output destination scripts.
-	[int]   $Padding       = 2,      # Number of newlines to separate each source script output by in the destination script.
-	[string]$PrefixScript  = "",     # Path to universal destination script beginner source script (comes before edit warning disclaimer, if enabled).
+	[int]   $Padding       = 1,      # Number of newlines to separate each source script output by in the destination script.
+	[string]$PrefixScript  = "",     # Path to universal destination script beginner source script (comes before edit warning disclaimer, if enabled; useful for shebangs).
 	[string]$SuffixScript  = ""      # Path to universal destination script ending source script.
 )
 
@@ -13,7 +13,7 @@ $srcFolderPath = Join-Path -Path $myPath -ChildPath $srcFolder;
 $srcFilenames  = (Get-ChildItem -Path $srcFolderPath).Name;
 $dstFolder     = "scripts";
 $dstFolderPath = Join-Path -Path $myPath -ChildPath $dstFolder;
-$dstPool       = Get-Content -Raw "aliases.json" | ConvertFrom-Json;
+$dstPool       = Get-Content "aliases.json" -Encoding UTF8 -Raw | ConvertFrom-Json;
 
 # Does a couple of things to get the source script list ready before the source scripts are matched.
 function Clean-SrcScripts {
@@ -60,7 +60,7 @@ function Get-IsMatching {
 	if ($SrcAlias.Length -ge $DstAlias.Length) {
 		return $false;
 	}
-
+	
 	# Similar to how domain names work (with directions reversed), if a source script is applied to a super-alias of the destination, that means it is applied to the full alias as well.
 	# .com is a super-domain of .com.facebook or .com.facebook.www, in other words.
 	# If a source script has the alias "(com)", that means it should apply to all .com websites, while "(com.facebook)" and "(com.facebook.www)" are more specific.
@@ -144,18 +144,18 @@ function Write-DstScripts {
 	
 	# The prefix and suffix scripts are universal, so they do not need to be read more than once.
 	if ($PrefixScript -ne "") {
-		$prefixContent = Get-Content -Path $PrefixScript;
+		$prefixContent = Get-Content -Path $PrefixScript -Encoding UTF8 -Raw;
 	}
 	if ($SuffixScript -ne "") {
-		$suffixContent = Get-Content -Path $SuffixScript;
+		$suffixContent = Get-Content -Path $SuffixScript -Encoding UTF8 -Raw;
 	}
 	$paddingContent = Write-Padding;
-
+	
 	# Create the destination script directory if it doesn't exist.
 	if (-not (Test-Path -PathType "container" -Path $dstFolderPath)) {
 		New-Item -ItemType "directory" -Path $dstFolderPath
 	}
-
+	
 	# Now do the work; for each destination script:
 	$SrcDstMap.GetEnumerator() | ForEach-Object {
 		$bodyContent = "";
@@ -181,7 +181,7 @@ function Write-DstScripts {
 		
 		# Generate a warning line to discourage editing the generated script (if the script user enables disclaimers).
 		if ($Disclaimerize -eq $true) {
-			$bodyContent += Write-Output $CommentStart" DO NOT EDIT; this script was generated from a number of sources that are identified and demarcated in sections below. Edit those instead.";
+			$bodyContent += Write-Output $CommentStart" DO NOT EDIT; this script was generated from a number of sources that are identified and demarcated in sections below. Edit those instead.`n";
 			$bodyContent += $paddingContent;
 		}
 		
@@ -189,15 +189,12 @@ function Write-DstScripts {
 		foreach ($srcFilename in $_.Value) {
 			# Generate a source code referral comment (if the script user enables disclaimers).
 			if ($Disclaimerize -eq $true) {
-				$bodyContent += Write-Output $CommentStart' Source: "'$srcFolder'/'$srcFilename'"';
+				$bodyContent += Write-Output $CommentStart' Source: "'$srcFilename"`"`n";
 				$bodyContent += $paddingContent;
 			}
 			
 			# Append the matched source script's content to the destination script in the correct order.
-			$srcContent = Get-Content -Path (Join-Path -Path $srcFolderPath -ChildPath $srcFilename);
-			foreach ($line in $srcContent) {
-				$bodyContent += $line + "`n";
-			}
+			$bodyContent += Get-Content -Path (Join-Path -Path $srcFolderPath -ChildPath $srcFilename) -Encoding UTF8 -Raw;
 			$bodyContent += $paddingContent;
 		}
 		
@@ -206,8 +203,12 @@ function Write-DstScripts {
 			$bodyContent += $suffixContent;
 		}
 		
+		# Standardizes on using LF line endings in the destination scripts (have not found any situation where this causes problems on Windows, as opposed to CRLF on Mac or Linux).
+		# This also stops differences between the source scripts from causing the destination script to vary between both line endings.
+		$bodyContent = $bodyContent -Replace "`r`n", "`n";
+		
 		# Finally write the destination script to the filesystem.
-		Write-Output $bodyContent | Out-File -FilePath $dstFilepath -Append;
+		Out-File -InputObject $bodyContent -FilePath $dstFilepath -Encoding UTF8 -NoNewLine;
 	}
 }
 

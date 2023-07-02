@@ -1,5 +1,0 @@
-configure terminal
-
-ip domain-name pvt.homenet.com
-
-end

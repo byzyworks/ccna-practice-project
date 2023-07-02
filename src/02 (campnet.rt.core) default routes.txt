@@ -1,6 +1,0 @@
-configure terminal
-
-ip route 0.0.0.0 0.0.0.0 123.45.67.1
-ipv6 route ::/0 2001:8cc7:0ed7:73a1:7d7e:a493:fab4:66eb
-
-end

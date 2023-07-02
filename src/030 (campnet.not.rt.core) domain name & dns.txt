@@ -1,0 +1,4 @@
+ip domain-name pvt.campnet.com
+ip name-server 10.0.11.20
+ip name-server fd51:fd0c:4932:de2a:ba89:8442:929:97b1
+ip domain-lookup

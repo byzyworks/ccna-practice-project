@@ -1,0 +1,2 @@
+interface FastEthernet 0/1
+description "fl03-dt-1 link"

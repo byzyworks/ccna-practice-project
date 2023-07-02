@@ -1,9 +1,0 @@
-configure terminal
-
-interface GigabitEthernet 0/1
-description "core-rt-1 link"
-
-interface Port-channel1
-description "dist-sw-2 redundant EtherChannel link"
-
-end

@@ -1,5 +1,0 @@
-configure terminal
-
-ipv6 unicast-routing
-
-end

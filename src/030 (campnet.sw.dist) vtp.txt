@@ -1,0 +1,2 @@
+vtp mode server
+vtp domain campnet

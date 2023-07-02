@@ -1,0 +1,6 @@
+! Packet Tracer does not allow IPv6 on VLAN interfaces
+
+interface Vlan1
+description "administrative SVI"
+ip address 10.0.6.7 255.255.255.0
+no shutdown

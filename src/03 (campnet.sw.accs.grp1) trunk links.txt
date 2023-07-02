@@ -1,9 +1,0 @@
-configure terminal
-
-interface Port-channel2
-description "dist-sw-1 EtherChannel link"
-
-interface Port-channel3
-description "dist-sw-2 EtherChannel link"
-
-end

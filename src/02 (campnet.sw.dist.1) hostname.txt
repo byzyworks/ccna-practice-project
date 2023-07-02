@@ -1,5 +1,0 @@
-configure terminal
-
-hostname dist-sw-1
-
-end

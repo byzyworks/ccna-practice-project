@@ -1,5 +1,0 @@
-configure terminal
-
-hostname fl01-sw-1
-
-end

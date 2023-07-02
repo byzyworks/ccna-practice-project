@@ -1,5 +1,0 @@
-configure terminal
-
-hostname core-rt-1
-
-end
