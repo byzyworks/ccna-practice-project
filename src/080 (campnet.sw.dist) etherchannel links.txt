@@ -1,0 +1,18 @@
+interface range FastEthernet 0/23 - 24
+channel-group 1 mode active
+no switchport port-security
+no switchport port-security mac-address sticky
+no shutdown
+
+interface Port-channel1
+switchport mode trunk
+switchport trunk native vlan 999
+switchport trunk allowed vlan 1,100,110,120,130,140,150,160
+switchport nonegotiate
+no shutdown
+
+interface Port-channel2
+description "fl01-sw-1 link"
+
+interface Port-channel3
+description "fl01-sw-2 link"

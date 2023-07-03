@@ -1,73 +1,80 @@
 [
 	[
 		"default.rt.2911",
-		"all.rt.2911"
+		"rt.2911"
 	],
 	[
 		"default.sw.c3650",
-		"all.sw.c3650"
+		"sw.c3650"
 	],
 	[
 		"default.sw.c2960",
-		"all.sw.c2960"
+		"sw.c2960"
 	],
 	[
 		"isp.sw",
-		"all.sw.c3650"
+		"sw.c3650"
 	],
 	[
 		"campnet.rt.core.1",
-		"all.not.isp",
-		"all.rt.2911"
+		"rt.2911",
+		"not-isp"
 	],
 	[
 		"campnet.rt.core.2",
-		"all.not.isp",
-		"all.rt.2911"
+		"rt.2911",
+		"not-isp"
 	],
 	[
 		"campnet.rt.virt.1",
-		"all.not.isp",
-		"all.rt.2911"
+		"campnet.not-rt-core",
+		"rt.2911",
+		"not-isp"
 	],
 	[
 		"campnet.sw.dist.1",
-		"all.not.isp",
-		"all.sw.c2960",
-		"campnet.sw.grp1"
+		"campnet.sw.grp1",
+		"campnet.not-rt-core",
+		"sw.c2960",
+		"not-isp"
 	],
 	[
 		"campnet.sw.dist.2",
-		"all.not.isp",
-		"all.sw.c2960",
-		"campnet.sw.grp1"
+		"campnet.sw.grp1",
+		"campnet.not-rt-core",
+		"sw.c2960",
+		"not-isp"
 	],
 	[
 		"campnet.sw.fl01.1",
-		"all.not.isp",
-		"all.sw.c2960",
+		"campnet.sw.accs.grp1",
 		"campnet.sw.grp1",
-		"campnet.sw.accs.grp1"
+		"campnet.not-rt-core",
+		"sw.c2960",
+		"not-isp"
 	],
 	[
 		"campnet.sw.fl01.2",
-		"all.not.isp",
-		"all.sw.c2960",
+		"campnet.sw.accs.grp1",
 		"campnet.sw.grp1",
-		"campnet.sw.accs.grp1"
+		"campnet.not-rt-core",
+		"sw.c2960",
+		"not-isp"
 	],
 	[
 		"campnet.sw.fl02.1",
-		"all.not.isp",
-		"all.sw.c2960",
+		"campnet.sw.accs.grp2",
 		"campnet.sw.grp2",
-		"campnet.sw.accs.grp2"
+		"campnet.not-rt-core",
+		"sw.c2960",
+		"not-isp"
 	],
 	[
 		"campnet.sw.fl03.1",
-		"all.not.isp",
-		"all.sw.c2960",
+		"campnet.sw.accs.grp2",
 		"campnet.sw.grp2",
-		"campnet.sw.accs.grp2"
+		"campnet.not-rt-core",
+		"sw.c2960",
+		"not-isp"
 	]
 ]

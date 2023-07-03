@@ -1,0 +1,2 @@
+interface Port-channel1
+description "dist-sw-2 redundant EtherChannel link"
