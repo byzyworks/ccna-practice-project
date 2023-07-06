@@ -2,13 +2,13 @@
 ! NDP manages the rest
 
 ipv6 dhcp pool Admin_DHCP_v6
-dns-server 2001:f7a7:9790:6add:c2b3:034f:36ad:6575
-domain-name campus.com
+dns-server fd51:fd0c:4932:de2a:ba89:8442:929:97b1
+domain-name pvt.campus.com
 exit
 
 ipv6 dhcp pool CorpoLAN_DHCP_v6
-dns-server 2001:f7a7:9790:6add:c2b3:034f:36ad:6575
-domain-name campus.com
+dns-server fd51:fd0c:4932:de2a:ba89:8442:929:97b1
+domain-name pvt.campus.com
 exit
 
 ipv6 dhcp pool GuestLAN_DHCP_v6

@@ -1,0 +1,45 @@
+ISP DNS Server:
+A    ns1.campnet.com 123.45.67.88
+AAAA ns1.campnet.com 2001:f7a7:9790:6add:c2b3:34f:36ad:6575
+NS   campnet.com     ns1.campnet.com
+
+pubz-sv-1.camp:
+A     www.campnet.com 127.0.0.1
+AAAA  www.campnet.com ::1
+A     ns1.campnet.com 127.0.0.1
+AAAA  ns1.campnet.com ::1
+CNAME campnet.com     www.campnet.com
+NS    campnet.com     ns1.campnet.com
+
+intz-sv-1.camp:
+A     core-rt-a.pvt.campnet.com 10.0.6.1
+AAAA  core-rt-a.pvt.campnet.com fd51:fd0c:4932:e75f:bc0b:e946:b38d:97c1
+A     core-rt-1.pvt.campnet.com 10.0.6.2
+AAAA  core-rt-1.pvt.campnet.com fd51:fd0c:4932:e75f:d877:d4f3:78a1:f90e
+A     core-rt-2.pvt.campnet.com 10.0.6.3
+AAAA  core-rt-2.pvt.campnet.com fd51:fd0c:4932:e75f:e249:f851:61ce:433f
+A     dist-sw-1.pvt.campnet.com 10.0.6.4
+A     dist-sw-2.pvt.campnet.com 10.0.6.5
+A     fl01-sw-1.pvt.campnet.com 10.0.6.6
+A     fl01-sw-2.pvt.campnet.com 10.0.6.7
+A     fl02-sw-1.pvt.campnet.com 10.0.6.8
+A     fl03-sw-1.pvt.campnet.com 10.0.6.9
+A     dist-wc-1.pvt.campnet.com 10.0.12.4
+A     fl01-ac-1.pvt.campnet.com 10.0.12.5
+A     fl01-ac-2.pvt.campnet.com 10.0.12.6
+A     virt-rt-1.pvt.campnet.com 10.0.15.2
+AAAA  virt-rt-1.pvt.campnet.com fd51:fd0c:4932:8fd8:e4c5:a0bd:b9d8:e52c
+A     pubz-sv-1.pvt.campnet.com 10.0.10.20
+AAAA  pubz-sv-1.pvt.campnet.com 2001:f7a7:9790:6add:c2b3:34f:36ad:6575
+A     intz-sv-1.pvt.campnet.com 10.0.11.20
+AAAA  intz-sv-1.pvt.campnet.com fd51:fd0c:4932:de2a:ba89:8442:929:97b1
+CNAME www.campnet.com           pubz-sv-1.pvt.campnet.com
+CNAME ftp.pvt.campnet.com       intz-sv-1.pvt.campnet.com
+CNAME tftp.pvt.campnet.com      intz-sv-1.pvt.campnet.com
+CNAME ns1.pvt.campnet.com       intz-sv-1.pvt.campnet.com
+CNAME ns1.campnet.com           pubz-sv-1.pvt.campnet.com
+CNAME ntp.pvt.campnet.com       intz-sv-1.pvt.campnet.com
+CNAME log.pvt.campnet.com       intz-sv-1.pvt.campnet.com
+CNAME campnet.com               pubz-sv-1.pvt.campnet.com
+NS    pvt.campnet.com           ns1.pvt.campnet.com
+NS    campnet.com               ns1.campnet.com
