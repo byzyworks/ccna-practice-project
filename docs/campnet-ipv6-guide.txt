@@ -10,6 +10,7 @@ GUA Prefix: 2001:f7a7:9790:
   VLAN 140: 7153:
   VLAN 150: d85c:
   VLAN 160: 8814:
+  VLAN 170: 98c2:
 ULA Prefix: fd51:fd0c:4932:
   loopback: 06d2:
   core-rt:  da13:
@@ -21,6 +22,7 @@ ULA Prefix: fd51:fd0c:4932:
   VLAN 140: fb4a:
   VLAN 150: 8fd8:
   VLAN 160: 7b96:
+  VLAN 170: b971:
 
 ipv6 enable
 ipv6 address 2001:f7a7:9790:/64

@@ -1,0 +1,6 @@
+ip dhcp pool Guest_DHCP_v4
+network 10.0.17.0 255.255.255.0
+default-router 10.0.17.1
+dns-server 10.0.10.20
+domain-name lab.pvt.campus.com
+exit

@@ -1,1 +1,1 @@
-hostname core-rt-1
+hostname virt-rt-1
