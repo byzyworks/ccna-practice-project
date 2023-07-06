@@ -1,0 +1,22 @@
+! Packet Tracer doesn't appear to support WLAN traffic on different VLANs, which may be a bug
+! The issue appears to be that the WLC does not support its management interface being used as a trunk
+! As such, when CAPWAP traffic reaches the WLC from the lightweight APs, the de-encapsulated traffic is forwarded only ever on the management/native VLAN, as if the management interface were an access link, rather than forwarding it on the VLAN configured from the WLC (yet that option to change it is still there?)
+! Unfortunately, this means the traffic cannot use the DHCP servers already afforded to the correct VLANs, and all traffic is forced into the same one even for the different WLANs
+! That is why this exists, where normally only statically-assigned addresses for the WLC and APs would exist in this VLAN
+! Should this issue with PT's WLCs be fixed, this configuration would also go away
+
+ip dhcp pool MasterWiFi_DHCP_v4
+network 10.0.12.0 255.255.255.0
+default-router 10.0.12.1
+dns-server 10.0.10.20
+domain-name campus.com
+exit
+
+ipv6 dhcp pool MasterWiFi_DHCP_v6
+dns-server 2001:f7a7:9790:6add:c2b3:034f:36ad:6575
+domain-name campus.com
+exit
+
+interface GigabitEthernet 0/2.120
+ipv6 nd other-config-flag
+ipv6 dhcp server MasterWiFi_DHCP_v6

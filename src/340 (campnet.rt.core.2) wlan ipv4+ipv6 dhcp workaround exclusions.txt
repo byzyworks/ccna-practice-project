@@ -1,0 +1,2 @@
+ip dhcp excluded-address 10.0.12.1 10.0.12.174
+ip dhcp excluded-address 10.0.12.250 10.0.12.254
