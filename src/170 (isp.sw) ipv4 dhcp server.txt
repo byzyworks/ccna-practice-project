@@ -1,0 +1,5 @@
+ip dhcp pool Customer_DHCP
+network 123.45.67.0 255.255.255.0
+default-router 123.45.67.1
+dns-server 123.45.67.2
+exit

@@ -1,5 +1,5 @@
-! DHCP range: 10.0.17.100 - 10.0.17.254 for 154 addresses
+! DHCP range: 123.45.67.100 - 123.45.67.254 for 75 addresses
 ! All other interfaces require statically-assigned addresses
 ! Unfortunately, Packet Tracer does not seem to have DHCP reservation
 
-ip dhcp excluded-address 10.0.17.1 10.0.17.99
+ip dhcp excluded-address 123.45.67.1 123.45.67.99

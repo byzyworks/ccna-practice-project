@@ -1,1 +1,1 @@
-ip domain-name pvt.homenet.com
+ip domain-name home.arpa

@@ -16,6 +16,28 @@
 		"all.sw.c3650"
 	],
 	[
+		"homenet.rt.main.1",
+		"all.rt.2911",
+		"not-isp"
+	],
+	[
+		"homenet.sw.main.1",
+		"all.sw.c3650",
+		"not-isp"
+	],
+	[
+		"homenet.sw.offc.1",
+		"homenet.sw.accs",
+		"all.sw.c2960",
+		"not-isp"
+	],
+	[
+		"homenet.sw.room.1",
+		"homenet.sw.accs",
+		"all.sw.c2960",
+		"not-isp"
+	],
+	[
 		"campnet.rt.core.1",
 		"all.rt.2911",
 		"not-isp"

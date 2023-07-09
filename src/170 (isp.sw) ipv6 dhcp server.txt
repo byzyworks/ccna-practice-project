@@ -1,0 +1,10 @@
+! DHCP is still required in IPv6 for DNS information
+! NDP manages the rest
+
+ipv6 dhcp pool Customer_DHCP_v6
+dns-server 2001:8cc7:ed7:73a1:c1b:d2f9:30bc:fc03
+exit
+
+interface range GigabitEthernet 1/0/1 - 24
+ipv6 nd other-config-flag
+ipv6 dhcp server Customer_DHCP_v6

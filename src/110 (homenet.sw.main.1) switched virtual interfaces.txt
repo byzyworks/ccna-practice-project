@@ -1,0 +1,28 @@
+interface Vlan999
+description "default untagged SVI (do not use)"
+shutdown
+
+interface Vlan1
+description "SVI for WAN"
+ip address 192.168.0.2 255.255.255.0
+no shutdown
+
+interface Vlan10
+description "SVI for work stuff"
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+
+interface Vlan20
+description "SVI for casual stuff"
+ip address 192.168.2.1 255.255.255.0
+no shutdown
+
+interface Vlan30
+description "SVI for most stuff on WiFi"
+ip address 192.168.3.1 255.255.255.0
+no shutdown
+
+interface Vlan40
+description "SVI for guests and IoT"
+ip address 192.168.4.1 255.255.255.0
+no shutdown

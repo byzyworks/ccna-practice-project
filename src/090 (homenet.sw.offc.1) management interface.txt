@@ -1,0 +1,7 @@
+interface Vlan1
+shutdown
+
+interface Vlan10
+description "administrative SVI"
+ip address 192.168.1.10 255.255.255.0
+no shutdown

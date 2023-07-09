@@ -1,0 +1,8 @@
+! DHCP range: 192.168.x.100 - 192.168.x.254 for 154 addresses
+! All other interfaces require statically-assigned addresses
+! Unfortunately, Packet Tracer does not seem to have DHCP reservation
+
+ip dhcp excluded-address 192.168.1.1 192.168.0.99
+ip dhcp excluded-address 192.168.2.1 192.168.1.99
+ip dhcp excluded-address 192.168.3.1 192.168.2.99
+ip dhcp excluded-address 192.168.4.1 192.168.3.99

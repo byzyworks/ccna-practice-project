@@ -1,0 +1,27 @@
+interface GigabitEthernet 1/0/1
+description "main-rt-1 link"
+switchport mode access
+switchport access vlan 1
+no switchport port-security
+no switchport port-security mac-address sticky
+no shutdown
+
+interface GigabitEthernet 1/0/2
+description "offc-sw-1 link"
+switchport mode trunk
+switchport trunk native vlan 10
+switchport trunk allowed vlan 10,30
+switchport nonegotiate
+no switchport port-security
+no switchport port-security mac-address sticky
+no shutdown
+
+interface GigabitEthernet 1/0/3
+description "room-sw-1 link"
+switchport mode trunk
+switchport trunk native vlan 20
+switchport trunk allowed vlan 20,40
+switchport nonegotiate
+no switchport port-security
+no switchport port-security mac-address sticky
+no shutdown

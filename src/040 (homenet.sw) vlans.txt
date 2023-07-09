@@ -1,0 +1,8 @@
+vlan 10
+name Office
+vlan 20
+name Room
+vlan 30
+name WiFi
+vlan 40
+name Guest

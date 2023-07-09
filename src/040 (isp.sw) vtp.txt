@@ -1,2 +1,0 @@
-vtp mode transparent
-vtp domain isp

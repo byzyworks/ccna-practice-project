@@ -1,0 +1,1 @@
+spanning-tree vlan 10,20,30,40 root primary
