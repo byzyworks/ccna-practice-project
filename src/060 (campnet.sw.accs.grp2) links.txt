@@ -1,7 +1,7 @@
 interface range FastEthernet 0/17 - 18
 switchport mode trunk
 switchport trunk native vlan 999
-switchport trunk allowed vlan 1,130
+switchport trunk allowed vlan 90,130
 switchport nonegotiate
 no switchport port-security
 no switchport port-security mac-address sticky

@@ -3,7 +3,7 @@ standby 1 priority 110
 standby 1 preempt
 exit
 
-interface GigabitEthernet 0/2.1
+interface GigabitEthernet 0/2.90
 standby 1 priority 110
 standby 1 preempt
 exit

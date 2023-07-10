@@ -1,6 +1,6 @@
 ipv6 router eigrp 100
 passive-interface GigabitEthernet0/0
-passive-interface GigabitEthernet0/2.1
+passive-interface GigabitEthernet0/2.90
 passive-interface GigabitEthernet0/2.100
 passive-interface GigabitEthernet0/2.110
 passive-interface GigabitEthernet0/2.120

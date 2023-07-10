@@ -6,7 +6,7 @@ interface range GigabitEthernet 0/1 - 2
 ip nat inside
 exit
 
-interface GigabitEthernet 0/2.1
+interface GigabitEthernet 0/2.90
 ip nat inside
 exit
 

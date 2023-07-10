@@ -1,8 +1,5 @@
-vlan 1
-exit
-
-vlan 999
-name SecureDefault
+vlan 90
+name Admin
 exit
 
 vlan 100
@@ -31,4 +28,8 @@ exit
 
 vlan 160
 name VOIP
+exit
+
+vlan 999
+name SecureDefault
 exit

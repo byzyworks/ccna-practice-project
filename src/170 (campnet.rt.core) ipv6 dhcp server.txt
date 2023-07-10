@@ -16,7 +16,7 @@ dns-server 2001:f7a7:9790:6add:c2b3:034f:36ad:6575
 domain-name campus.com
 exit
 
-interface GigabitEthernet 0/2.1
+interface GigabitEthernet 0/2.90
 ipv6 nd other-config-flag
 ipv6 dhcp server Admin_DHCP_v6
 exit

@@ -1,0 +1,4 @@
+interface GigabitEthernet 0/2
+description "LAN interface"
+no shutdown
+exit

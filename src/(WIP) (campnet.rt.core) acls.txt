@@ -111,7 +111,7 @@ ipv6 traffic-filter WAN_IN_v6 in
 ipv6 traffic-filter WAN_OUT_v6 out
 exit
 
-interface GigabitEthernet 0/2.1
+interface GigabitEthernet 0/2.90
 ip access-group Admin_IN_v4 in
 ip access-group Admin_OUT_v4 out
 ipv6 traffic-filter Admin_IN_v6 in

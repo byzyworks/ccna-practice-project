@@ -1,1 +1,1 @@
-spanning-tree vlan 1,100,110,130,150 root primary
+spanning-tree vlan 90,100,110,130,150 root primary

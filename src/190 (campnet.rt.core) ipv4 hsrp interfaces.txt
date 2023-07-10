@@ -2,7 +2,7 @@ interface GigabitEthernet 0/0
 standby 1 ip 123.45.67.89
 exit
 
-interface GigabitEthernet 0/2.1
+interface GigabitEthernet 0/2.90
 standby 1 ip 10.0.6.1
 exit
 

@@ -10,7 +10,7 @@ interface GigabitEthernet 0/2
 description "dist-wc-1 link"
 switchport mode trunk
 switchport trunk native vlan 120
-switchport trunk allowed vlan 1,120,130,140
+switchport trunk allowed vlan 90,120,130,140
 switchport nonegotiate
 no switchport port-security
 no switchport port-security mac-address sticky

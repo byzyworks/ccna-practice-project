@@ -1,13 +1,6 @@
-interface GigabitEthernet 0/2.999
-description "default untagged RoaS interface (do not use)"
-encapsulation dot1Q 999 native
-shutdown
-exit
-
-interface GigabitEthernet 0/2.1
+interface GigabitEthernet 0/2.90
 description "administrative RoaS interface"
-no encapsulation dot1Q 1
-encapsulation dot1Q 1
+encapsulation dot1Q 90
 exit
 
 interface GigabitEthernet 0/2.100
@@ -45,7 +38,8 @@ description "VOIP RoaS interface"
 encapsulation dot1Q 160
 exit
 
-interface GigabitEthernet 0/2
-description "LAN interface"
-no shutdown
+interface GigabitEthernet 0/2.999
+description "default untagged RoaS interface (do not use)"
+encapsulation dot1Q 999 native
+shutdown
 exit

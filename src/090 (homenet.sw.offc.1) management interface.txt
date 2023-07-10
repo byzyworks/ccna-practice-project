@@ -1,3 +1,5 @@
+! Packet Tracer doesn't allow IPv6 on SVIs for Catalyst 2960 switches
+
 interface Vlan1
 shutdown
 exit
