@@ -19,11 +19,14 @@ exit
 interface GigabitEthernet 0/2.1
 ipv6 nd other-config-flag
 ipv6 dhcp server Admin_DHCP_v6
+exit
 
 interface GigabitEthernet 0/2.130
 ipv6 nd other-config-flag
 ipv6 dhcp server CorpoLAN_DHCP_v6
+exit
 
 interface GigabitEthernet 0/2.140
 ipv6 nd other-config-flag
 ipv6 dhcp server GuestLAN_DHCP_v6
+exit

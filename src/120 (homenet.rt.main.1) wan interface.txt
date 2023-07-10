@@ -2,3 +2,4 @@ interface GigabitEthernet 0/0
 description "WAN interface"
 ip address dhcp
 no shutdown
+exit

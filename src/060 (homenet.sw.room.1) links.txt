@@ -7,6 +7,7 @@ switchport nonegotiate
 no switchport port-security
 no switchport port-security mac-address sticky
 no shutdown
+exit
 
 interface GigabitEthernet 0/2
 description "room-ap-1 link"
@@ -15,6 +16,7 @@ switchport access vlan 40
 no switchport port-security
 no switchport port-security mac-address sticky
 no shutdown
+exit
 
 interface FastEthernet 0/1
 description "room-dt-1 link"
@@ -23,3 +25,4 @@ switchport access vlan 20
 no switchport port-security
 no switchport port-security mac-address sticky
 no shutdown
+exit

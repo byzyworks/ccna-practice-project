@@ -2,8 +2,10 @@ interface GigabitEthernet 0/2
 spanning-tree portfast
 spanning-tree guard root
 spanning-tree bpduguard enable
+exit
 
 interface range FastEthernet 0/1 - 24
 spanning-tree portfast
 spanning-tree guard root
 spanning-tree bpduguard enable
+exit

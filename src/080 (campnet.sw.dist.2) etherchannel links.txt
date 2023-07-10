@@ -1,5 +1,6 @@
 interface Port-channel1
 description "dist-sw-1 redundant EtherChannel link"
+exit
 
 interface GigabitEthernet 0/2
 description "dist-wc-1 link"
@@ -10,3 +11,4 @@ switchport nonegotiate
 no switchport port-security
 no switchport port-security mac-address sticky
 no shutdown
+exit

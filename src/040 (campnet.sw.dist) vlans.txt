@@ -1,18 +1,34 @@
 vlan 1
+exit
+
 vlan 999
 name SecureDefault
+exit
 
 vlan 100
 name Public
+exit
+
 vlan 110
 name Internal
+exit
+
 vlan 120
 name WLANManage
+exit
+
 vlan 130
 name CorpoLAN
+exit
+
 vlan 140
 name GuestLAN
+exit
+
 vlan 150
 name Lab
+exit
+
 vlan 160
 name VOIP
+exit

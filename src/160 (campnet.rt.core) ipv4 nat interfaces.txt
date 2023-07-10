@@ -1,29 +1,39 @@
 interface GigabitEthernet 0/0
 ip nat outside
+exit
 
 interface range GigabitEthernet 0/1 - 2
 ip nat inside
+exit
 
 interface GigabitEthernet 0/2.1
 ip nat inside
+exit
 
 interface GigabitEthernet 0/2.100
 ip nat inside
+exit
 
 interface GigabitEthernet 0/2.110
 ip nat inside
+exit
 
 interface GigabitEthernet 0/2.120
 ip nat inside
+exit
 
 interface GigabitEthernet 0/2.130
 ip nat inside
+exit
 
 interface GigabitEthernet 0/2.140
 ip nat inside
+exit
 
 interface GigabitEthernet 0/2.150
 ip nat inside
+exit
 
 interface GigabitEthernet 0/2.160
 ip nat inside
+exit

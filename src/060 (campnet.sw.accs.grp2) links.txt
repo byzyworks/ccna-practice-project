@@ -6,14 +6,18 @@ switchport nonegotiate
 no switchport port-security
 no switchport port-security mac-address sticky
 no shutdown
+exit
 
 interface FastEthernet 0/17
 description "dist-sw-1 link"
+exit
 
 interface FastEthernet 0/18
 description "dist-sw-2 link"
+exit
 
 interface FastEthernet 0/1
 switchport mode access
 switchport access vlan 130
 no shutdown
+exit

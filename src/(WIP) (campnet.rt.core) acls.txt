@@ -109,45 +109,53 @@ ip access-group WAN_IN_v4 in
 ip access-group WAN_OUT_v4 out
 ipv6 traffic-filter WAN_IN_v6 in
 ipv6 traffic-filter WAN_OUT_v6 out
+exit
 
 interface GigabitEthernet 0/2.1
 ip access-group Admin_IN_v4 in
 ip access-group Admin_OUT_v4 out
 ipv6 traffic-filter Admin_IN_v6 in
 ipv6 traffic-filter Admin_OUT_v6 out
+exit
 
 interface GigabitEthernet 0/2.100
 ip access-group Public_IN_v4 in
 ip access-group Public_OUT_v4 out
 ipv6 traffic-filter Public_IN_v6 in
 ipv6 traffic-filter Public_OUT_v6 out
+exit
 
 interface GigabitEthernet 0/2.110
 ip access-group Internal_IN_v4 in
 ip access-group Internal_OUT_v4 out
 ipv6 traffic-filter Internal_IN_v6 in
 ipv6 traffic-filter Internal_OUT_v6 out
+exit
 
 interface GigabitEthernet 0/2.120
 ip access-group WLANManage_IN_v4 in
 ip access-group WLANManage_OUT_v4 out
 ipv6 traffic-filter WLANManage_IN_v6 in
 ipv6 traffic-filter WLANManage_OUT_v6 out
+exit
 
 interface GigabitEthernet 0/2.130
 ip access-group CorpoLAN_IN_v4 in
 ip access-group CorpoLAN_OUT_v4 out
 ipv6 traffic-filter CorpoLAN_IN_v6 in
 ipv6 traffic-filter CorpoLAN_OUT_v6 out
+exit
 
 interface GigabitEthernet 0/2.140
 ip access-group GuestLAN_IN_v4 in
 ip access-group GuestLAN_OUT_v4 out
 ipv6 traffic-filter GuestLAN_IN_v6 in
 ipv6 traffic-filter GuestLAN_OUT_v6 out
+exit
 
 interface GigabitEthernet 0/2.150
 ip access-group Lab_IN_v4 in
 ip access-group Lab_OUT_v4 out
 ipv6 traffic-filter Lab_IN_v6 in
 ipv6 traffic-filter Lab_OUT_v6 out
+exit

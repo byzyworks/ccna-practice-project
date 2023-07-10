@@ -1,5 +1,7 @@
 interface Port-channel2
 description "dist-sw-1 EtherChannel link"
+exit
 
 interface Port-channel3
 description "dist-sw-2 EtherChannel link"
+exit

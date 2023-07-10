@@ -1,3 +1,4 @@
 interface Vlan1
 description "administrative SVI"
 shutdown
+exit

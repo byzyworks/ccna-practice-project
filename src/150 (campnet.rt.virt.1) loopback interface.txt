@@ -4,3 +4,4 @@ ipv6 enable
 ipv6 address fd51:fd0c:4932:06d2:fd54:630e:cbd2:0eff/64
 ipv6 address fe80::f7ed:92e8:d2a2:f3ae link-local
 no shutdown
+exit

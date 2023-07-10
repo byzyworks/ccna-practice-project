@@ -20,3 +20,4 @@ exit
 interface GigabitEthernet 0/2.120
 ipv6 nd other-config-flag
 ipv6 dhcp server MasterWiFi_DHCP_v6
+exit

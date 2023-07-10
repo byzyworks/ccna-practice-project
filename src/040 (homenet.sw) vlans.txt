@@ -1,8 +1,15 @@
 vlan 10
 name Office
+exit
+
 vlan 20
 name Room
+exit
+
 vlan 30
 name WiFi
+exit
+
 vlan 40
 name Guest
+exit

@@ -2,3 +2,4 @@ ipv6 router eigrp 100
 passive-interface GigabitEthernet0/1
 passive-interface GigabitEthernet0/2
 passive-interface Loopback0
+exit

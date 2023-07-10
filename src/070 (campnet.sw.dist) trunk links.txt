@@ -6,6 +6,7 @@ switchport nonegotiate
 no switchport port-security
 no switchport port-security mac-address sticky
 no shutdown
+exit
 
 interface FastEthernet 0/17
 description "fl02-sw-1 link"
@@ -16,6 +17,7 @@ switchport nonegotiate
 no switchport port-security
 no switchport port-security mac-address sticky
 no shutdown
+exit
 
 interface FastEthernet 0/18
 description "fl03-sw-1 link"
@@ -26,3 +28,4 @@ switchport nonegotiate
 no switchport port-security
 no switchport port-security mac-address sticky
 no shutdown
+exit

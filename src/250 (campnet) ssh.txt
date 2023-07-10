@@ -2,3 +2,4 @@ access-list 20 permit 10.0.6.0 0.0.0.255
 
 line vty 0 15
 access-class 20 in
+exit

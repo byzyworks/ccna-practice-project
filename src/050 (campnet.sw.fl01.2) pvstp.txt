@@ -2,3 +2,4 @@ interface range FastEthernet 0/1 - 4
 spanning-tree portfast
 spanning-tree guard root
 spanning-tree bpduguard enable
+exit

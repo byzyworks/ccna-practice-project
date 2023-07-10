@@ -1,26 +1,35 @@
 interface GigabitEthernet 0/0
 standby 1 ip 123.45.67.89
+exit
 
 interface GigabitEthernet 0/2.1
 standby 1 ip 10.0.6.1
+exit
 
 interface GigabitEthernet 0/2.100
 standby 1 ip 10.0.10.1
+exit
 
 interface GigabitEthernet 0/2.110
 standby 1 ip 10.0.11.1
+exit
 
 interface GigabitEthernet 0/2.120
 standby 1 ip 10.0.12.1
+exit
 
 interface GigabitEthernet 0/2.130
 standby 1 ip 10.0.13.1
+exit
 
 interface GigabitEthernet 0/2.140
 standby 1 ip 10.0.14.1
+exit
 
 interface GigabitEthernet 0/2.150
 standby 1 ip 10.0.15.1
+exit
 
 interface GigabitEthernet 0/2.160
 standby 1 ip 10.0.16.1
+exit

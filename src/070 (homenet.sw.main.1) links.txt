@@ -5,6 +5,7 @@ switchport access vlan 1
 no switchport port-security
 no switchport port-security mac-address sticky
 no shutdown
+exit
 
 interface GigabitEthernet 1/0/2
 description "offc-sw-1 link"
@@ -15,6 +16,7 @@ switchport nonegotiate
 no switchport port-security
 no switchport port-security mac-address sticky
 no shutdown
+exit
 
 interface GigabitEthernet 1/0/3
 description "room-sw-1 link"
@@ -25,3 +27,4 @@ switchport nonegotiate
 no switchport port-security
 no switchport port-security mac-address sticky
 no shutdown
+exit

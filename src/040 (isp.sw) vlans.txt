@@ -1,10 +1,19 @@
 vlan 500
 name ISP
+exit
+
 vlan 510
 name HomeNet
+exit
+
 vlan 520
 name CampNet
+exit
+
 vlan 530
 name MeshNet
+exit
+
 vlan 540
 name DataNet
+exit

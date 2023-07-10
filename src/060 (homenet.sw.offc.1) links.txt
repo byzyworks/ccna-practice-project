@@ -7,6 +7,7 @@ switchport nonegotiate
 no switchport port-security
 no switchport port-security mac-address sticky
 no shutdown
+exit
 
 interface GigabitEthernet 0/2
 description "offc-ap-1 link"
@@ -15,6 +16,7 @@ switchport access vlan 30
 no switchport port-security
 no switchport port-security mac-address sticky
 no shutdown
+exit
 
 interface FastEthernet 0/1
 description "main-sv-1 link"
@@ -23,6 +25,7 @@ switchport access vlan 10
 no switchport port-security
 no switchport port-security mac-address sticky
 no shutdown
+exit
 
 interface FastEthernet 0/2
 description "offc-dt-1 link"
@@ -31,3 +34,4 @@ switchport access vlan 10
 no switchport port-security
 no switchport port-security mac-address sticky
 no shutdown
+exit

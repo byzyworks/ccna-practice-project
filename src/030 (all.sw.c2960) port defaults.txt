@@ -3,9 +3,11 @@ switchport mode trunk
 switchport trunk native vlan 999
 switchport nonegotiate
 shutdown
+exit
 
 interface range GigabitEthernet 0/1 - 2
 switchport mode trunk
 switchport trunk native vlan 999
 switchport nonegotiate
 shutdown
+exit

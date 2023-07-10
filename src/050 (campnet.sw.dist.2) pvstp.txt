@@ -4,3 +4,4 @@ interface GigabitEthernet 0/2
 spanning-tree portfast
 spanning-tree guard root
 spanning-tree bpduguard enable
+exit

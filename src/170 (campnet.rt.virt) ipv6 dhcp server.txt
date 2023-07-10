@@ -9,3 +9,4 @@ exit
 interface GigabitEthernet 0/2
 ipv6 nd other-config-flag
 ipv6 dhcp server Guest_DHCP_v6
+exit
