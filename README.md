@@ -80,7 +80,7 @@ The *alias-of-application* is an alias just like the ones above, or it could be 
 
 The order number at the beginning is used to order each of the source scripts within the destination script, to which this order will be consistent across all destination scripts. The source scripts are sorted numerically for this based on this order number, where within the same order order, sorting is done arbitrarily (in other words, not at all). It is important to consider how some of these scripts are ordered, since some configurations do not work without preceding configurations that may be defined in another source script.
 
-Importantly, an implication here is that the source scripts are transpiled/consolidated into the destination scripts. Therefore, when making changes, the destination scripts **should not** be edited, or the changes made to them risk being overriden. Changes should be made to the source scripts and then re-transpiled. To do this, it simply takes running the consolidation script responsible for this process. In a terminal window open in the same directory as this readme file, that can be done by running this command:
+Importantly, an implication here is that the source scripts are transpiled/consolidated into the destination scripts. Therefore, when making changes, the destination scripts **should not** be edited, or the changes made to them risk being overriden. Changes should be made to the source scripts and then re-transpiled. To do this, it simply takes running the consolidation script responsible for this process. In a terminal window open in the same directory as this readme file, and on Windows, that can be done by running this command:
 
 ```
 powershell.exe ./Consolidate-Scripts.ps1
