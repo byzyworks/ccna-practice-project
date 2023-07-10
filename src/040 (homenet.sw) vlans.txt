@@ -13,3 +13,7 @@ exit
 vlan 40
 name Guest
 exit
+
+vlan 999
+name SecureDefault
+exit

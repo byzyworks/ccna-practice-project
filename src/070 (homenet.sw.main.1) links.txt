@@ -1,10 +1,7 @@
 interface GigabitEthernet 1/0/1
-description "main-rt-1 link"
-switchport mode access
-switchport access vlan 1
+no switchport
 no switchport port-security
 no switchport port-security mac-address sticky
-no shutdown
 exit
 
 interface GigabitEthernet 1/0/2

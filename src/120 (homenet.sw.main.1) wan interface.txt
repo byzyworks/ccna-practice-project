@@ -1,0 +1,5 @@
+interface GigabitEthernet 1/0/1
+description "main-rt-1 interface"
+ip address 192.168.0.2 255.255.255.0
+no shutdown
+exit
