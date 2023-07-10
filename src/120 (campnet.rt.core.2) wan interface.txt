@@ -1,6 +1,6 @@
 interface GigabitEthernet 0/0
 description "WAN interface"
-ip address 123.45.67.91 255.255.255.0
+ip address 123.45.67.91 255.255.255.240
 ipv6 enable
 ipv6 address 2001:8cc7:0ed7:73a1:a9e8:775d:b354:d649/64
 ipv6 address fe80::e6f9:d375:541e:56ba link-local

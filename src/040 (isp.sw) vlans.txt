@@ -1,0 +1,10 @@
+vlan 500
+name ISP
+vlan 510
+name HomeNet
+vlan 520
+name CampNet
+vlan 530
+name MeshNet
+vlan 540
+name DataNet

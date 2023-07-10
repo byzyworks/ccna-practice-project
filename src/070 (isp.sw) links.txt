@@ -1,0 +1,39 @@
+interface GigabitEthernet 1/0/1
+description "root DNS link"
+switchport mode access
+switchport access vlan 500
+no switchport port-security
+no switchport port-security mac-address sticky
+no shutdown
+
+interface GigabitEthernet 1/0/2
+description "HomeNet link"
+switchport mode access
+switchport access vlan 510
+no switchport port-security
+no switchport port-security mac-address sticky
+no shutdown
+
+interface GigabitEthernet 1/0/3
+description "CampNet link"
+switchport mode access
+switchport access vlan 520
+no switchport port-security
+no switchport port-security mac-address sticky
+no shutdown
+
+interface range GigabitEthernet 1/0/4 - 5
+description "MeshNet link"
+switchport mode access
+switchport access vlan 530
+no switchport port-security
+no switchport port-security mac-address sticky
+no shutdown
+
+interface range GigabitEthernet 1/0/6 - 7
+description "DataNet link"
+switchport mode access
+switchport access vlan 540
+no switchport port-security
+no switchport port-security mac-address sticky
+shutdown

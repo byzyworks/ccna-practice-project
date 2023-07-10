@@ -1,4 +1,4 @@
 ! 123.45.67.89 is CampNet's HSRP virtual IP
-ip nat pool Internet 123.45.67.89 123.45.67.89 netmask 255.255.255.0
+ip nat pool Internet 123.45.67.89 123.45.67.89 netmask 255.255.255.240
 access-list 10 permit 10.0.0.0 0.255.255.255
 ip nat inside source list 10 pool Internet overload
