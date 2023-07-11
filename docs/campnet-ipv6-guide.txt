@@ -2,7 +2,7 @@ GUA Prefix: 2001:f7a7:9790:
   wan:      fdce:
   loopback: 2fe8:
   core-rt:  7375:
-  VLAN 1:   597e:
+  VLAN 90:  597e:
   VLAN 100: 6add:
   VLAN 110: 72b0:
   VLAN 120: 4fc8:
@@ -14,7 +14,7 @@ GUA Prefix: 2001:f7a7:9790:
 ULA Prefix: fd51:fd0c:4932:
   loopback: 06d2:
   core-rt:  da13:
-  VLAN 1:   e75f:
+  VLAN 90:  e75f:
   VLAN 100: ee81:
   VLAN 110: de2a:
   VLAN 120: 057e:
