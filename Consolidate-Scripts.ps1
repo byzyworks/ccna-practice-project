@@ -10,7 +10,7 @@ param (
 $myPath        = Split-Path -Parent -Path $MyInvocation.MyCommand.Definition;
 $srcFolder     = "src";
 $srcFolderPath = Join-Path -Path $myPath -ChildPath $srcFolder;
-$srcFilenames  = (Get-ChildItem -Path $srcFolderPath).Name;
+$srcPool       = Get-ChildItem -Path $srcFolderPath -File -Recurse;
 $dstFolder     = "scripts";
 $dstFolderPath = Join-Path -Path $myPath -ChildPath $dstFolder;
 $dstPool       = Get-Content "aliases.json" -Encoding UTF8 -Raw | ConvertFrom-Json;
@@ -26,14 +26,14 @@ function Clean-SrcScripts {
 	$formattedList = @();
 	
 	# Source scripts that contain this exact string ("(WIP)") in their filename are not used in the destination script.
-	foreach ($srcFilename in $RawList) {
-		if (-Not ($srcFilename.Contains("(WIP)"))) {
-			$formattedList += $srcFilename;
+	foreach ($srcScript in $RawList) {
+		if (-Not ($srcScript.Name.Contains("(WIP)"))) {
+			$formattedList += $srcScript;
 		}
 	}
 	
 	# The order number is used to order the arrange the source scripts accordingly, but the scripts will default to being sorted alphabetically. This corrects that.
-	$formattedList = $formattedList | Sort-Object {[int]($_.Split(" "))[0]};
+	$formattedList = $formattedList | Sort-Object {[int]($_.Name.Split(" "))[0]};
 	
 	return $formattedList;
 }
@@ -78,16 +78,16 @@ function Get-IsMatching {
 function Get-SrcDstPairs {
 	# Using a dictionary/map means the destination (key) won't ever be duplicated.
 	$srcDstMap = @{}
-
+	
 	# Main loop; for each source script:
-	foreach ($srcFilename in $srcFilenames) {
+	foreach ($srcScript in $srcPool) {
 		# Each source script has a structured naming convention of elements delimited by spaces.
 		# Except where a source script is marked as "(WIP)" anywhere, this is the regular convention of elements from left to right:
 		#
 		# 1. Order Number - Used to force an ordering of the source script relative to other sources. Lower-numbered scripts appear in the destination script before higher-numbered ones, otherwise, where two order numbers are the same, the code in each source is ordered arbitrarily within the destination script (technically in alphabetical order of the filename).
 		# 2. Matching Alias - The namespace that the script applies to. This is matched against the aliases for a particular destination script to determine whether it should be applied to that destination script or not.
 		# 3. Description - This is to distinguish the script for its intended area of application or purpose, and is not parsed.
-		$srcElements = $srcFilename.Split(" ");
+		$srcElements = $srcScript.Name.Split(" ");
 		$srcOrderNum = [int]$srcElements[0];
 		$srcAlias    = $srcElements[1].TrimStart("(").TrimEnd(")");
 		
@@ -120,7 +120,7 @@ function Get-SrcDstPairs {
 				}
 				
 				# Maps the source to the destination.
-				$srcDstMap[$dstCname] += $srcFilename;
+				$srcDstMap[$dstCname] += $srcScript;
 			}
 		}
 	}
@@ -186,15 +186,15 @@ function Write-DstScripts {
 		}
 		
 		# Append every source script previously matched to the current destination script.
-		foreach ($srcFilename in $_.Value) {
+		foreach ($srcScript in $_.Value) {
 			# Generate a source code referral comment (if the script user enables disclaimers).
 			if ($Disclaimerize -eq $true) {
-				$bodyContent += Write-Output $CommentStart' Source: "'$srcFilename"`"`n";
+				$bodyContent += Write-Output $CommentStart' Source: "'$srcScript"`"`n";
 				$bodyContent += $paddingContent;
 			}
 			
 			# Append the matched source script's content to the destination script in the correct order.
-			$bodyContent += Get-Content -Path (Join-Path -Path $srcFolderPath -ChildPath $srcFilename) -Encoding UTF8 -Raw;
+			$bodyContent += Get-Content -Path $srcScript.FullName -Encoding UTF8 -Raw;
 			$bodyContent += $paddingContent;
 		}
 		
@@ -213,6 +213,6 @@ function Write-DstScripts {
 }
 
 # Main program.
-$srcFilenames = Clean-SrcScripts -RawList $srcFilenames;
+$srcPool = Clean-SrcScripts -RawList $srcPool;
 $srcDstMap = Get-SrcDstPairs;
 Write-DstScripts -SrcDstMap $srcDstMap;

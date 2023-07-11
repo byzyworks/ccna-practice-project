@@ -100,8 +100,6 @@ The description part, including the file extension, is not parsed, and is only t
 
 Currently, the system doesn't make it easy to have "negated" entries, where a negative entry matched makes the entire destination 'unmatched' (making the destination alias list function like a firewall of sorts against a source's alias-of-application). Hence, work-arounds must be used, like using aliases such as "`not-isp`" (note the dash instead of the period), and then applying that alias to all "non-ISP" destinations. Support for negative aliases may come in the future.
 
-Additionally, the source script folder has ballooned as more configurations have been added. Therefore, at some point, support for folders as alias 'parts' (e.g. making "`./src/020 (campnet.rt.core.1) hostname.txt`" the same as "`./src/campnet/020 (rt.core.1) hostname.txt`") should be added. Currently, the consolidation script does not know how to parse folders under "`./src`".
-
 Auto-marking of destination scripts as read-only is also under consideration, though the ways of going about this may differ by filesystem.
 
 <br>
