@@ -1,0 +1,10 @@
+GUA Prefix: 2001:627c:96cc:
+  wan:      4fc8:
+  loopback: ee81:
+ULA Prefix: fd4d:bcbf:c0d7:
+  loopback: 72b0:
+
+ipv6 enable
+ipv6 address 2001:627c:96cc:/64
+ipv6 address fd4d:bcbf:c0d7:/64
+ipv6 address fe80: link-local

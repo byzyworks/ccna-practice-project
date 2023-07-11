@@ -1,0 +1,10 @@
+GUA Prefix: 2001:6213:97a5:
+  wan:      7153:
+  loopback: fb4a:
+ULA Prefix: fdc0:85b9:d583:
+  loopback: d85c:
+
+ipv6 enable
+ipv6 address 2001:6213:97a5:/64
+ipv6 address fdc0:85b9:d583:/64
+ipv6 address fe80: link-local

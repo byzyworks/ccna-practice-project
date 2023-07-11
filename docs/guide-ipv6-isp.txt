@@ -1,0 +1,7 @@
+GUA Prefix: 2001:3c8e:82f6:c6ef
+ULA Prefix: fd75:7b96:7375:822a
+
+ipv6 enable
+ipv6 address 2001:3c8e:82f6:c6ef:/64
+ipv6 address fd75:7b96:7375:822a:/64
+ipv6 address fe80: link-local

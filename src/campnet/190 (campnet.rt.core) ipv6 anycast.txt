@@ -1,7 +1,7 @@
 ! Anycast is used in place of HSRP for IPv6
 
 interface GigabitEthernet 0/0
-ipv6 address 2001:8cc7:0ed7:73a1:7720:e1a8:295e:ebe2/64 anycast
+ipv6 address 2001:f7a7:9790:fdce:7720:e1a8:295e:ebe2/64 anycast
 exit
 
 interface GigabitEthernet 0/2.90
