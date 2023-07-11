@@ -1,0 +1,23 @@
+interface GigabitEthernet 0/0
+ip address 10.0.1.10 255.255.255.252
+ipv6 enable
+ipv6 address 2001:627c:96cc:44eb:5378:8177:99f2:d8de/64
+ipv6 address fe80::4403:808a:16fa:709d link-local
+no shutdown
+exit
+
+interface GigabitEthernet 0/1
+ip address 10.0.1.14 255.255.255.252
+ipv6 enable
+ipv6 address 2001:627c:96cc:9705:e635:126d:322e:3301/64
+ipv6 address fe80::b460:c03f:2f58:2ff3 link-local
+no shutdown
+exit
+
+interface GigabitEthernet 0/2
+ip address 10.0.3.5 255.255.255.252
+ipv6 enable
+ipv6 address 2001:627c:96cc:996d:69a7:7dab:fa15:514f/64
+ipv6 address fe80::8844:9554:37c7:9698 link-local
+no shutdown
+exit

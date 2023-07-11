@@ -2,3 +2,4 @@ ip routing
 ipv6 unicast-routing
 
 ipv6 route 2001:f7a7:9790::/48 2001:f7a7:9790:fdce:7720:e1a8:295e:ebe2
+ipv6 route 2001:627c:96cc::/48 2001:627c:96cc:4fc8:0259:15fc:c785:dfdc

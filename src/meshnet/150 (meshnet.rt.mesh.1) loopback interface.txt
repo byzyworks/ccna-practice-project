@@ -1,0 +1,7 @@
+interface loopback 0
+ip address 172.16.0.3 255.255.240.0
+ipv6 enable
+ipv6 address fd4d:bcbf:c0d7:72b0:db3b:620e:2cf2:590e/64
+ipv6 address fe80::1f8b:2a06:7c9c:a36e link-local
+no shutdown
+exit

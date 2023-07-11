@@ -1,0 +1,4 @@
+interface GigabitEthernet 0/0
+standby 1 priority 110
+standby 1 preempt
+exit

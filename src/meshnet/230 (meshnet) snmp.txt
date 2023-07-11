@@ -1,0 +1,5 @@
+! Packet Tracer doesn't support SNMP traps
+! All monitoring is from manager to node via. MIB browser
+
+snmp-server community MeshNetRO ro
+snmp-server community MeshNetRW rw

@@ -1,0 +1,16 @@
+interface GigabitEthernet 0/0
+ip address 10.0.2.2 255.255.255.252
+ipv6 enable
+ipv6 address 2001:627c:96cc:2fe8:58b8:ae5f:2991:e7e6/64
+ipv6 address fe80::b3e7:8d85:a1c3:1aa3 link-local
+no shutdown
+exit
+
+interface GigabitEthernet 0/1
+description "mesh-dt-1 interface"
+ip address 10.1.1.1 255.255.255.252
+ipv6 enable
+ipv6 address 2001:627c:96cc:597e:abbc:0c8e:b597:7cf2/64
+ipv6 address fe80::4890:a434:dd59:d13c link-local
+no shutdown
+exit

@@ -98,5 +98,41 @@
 		"campnet.not-rt-core",
 		"all.sw.c2960",
 		"not-isp"
+	],
+	[
+		"meshnet.rt.core.1",
+		"all.rt.2911"
+	],
+	[
+		"meshnet.rt.core.2",
+		"all.rt.2911"
+	],
+	[
+		"meshnet.rt.mesh.1",
+		"all.rt.2911"
+	],
+	[
+		"meshnet.rt.mesh.2",
+		"all.rt.2911"
+	],
+	[
+		"meshnet.rt.mesh.3",
+		"all.rt.2911"
+	],
+	[
+		"meshnet.rt.mesh.4",
+		"all.rt.2911"
+	],
+	[
+		"meshnet.rt.mesh.5",
+		"all.rt.2911"
+	],
+	[
+		"meshnet.rt.mesh.6",
+		"all.rt.2911"
+	],
+	[
+		"meshnet.rt.mesh.7",
+		"all.rt.2911"
 	]
 ]

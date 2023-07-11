@@ -1,0 +1,7 @@
+interface GigabitEthernet 0/0
+ip nat outside
+exit
+
+interface range GigabitEthernet 0/1 - 2
+ip nat inside
+exit
