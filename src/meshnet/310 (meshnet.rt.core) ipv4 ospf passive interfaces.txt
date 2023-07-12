@@ -1,0 +1,3 @@
+router ospf 1
+passive-interface GigabitEthernet0/0
+exit

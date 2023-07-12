@@ -344,7 +344,8 @@ WIP
 
 ### WIP
 
-* Everything
+* OSPF routing configurations
+* ASBR example. For this, a new "sub-subnetwork" would be appended running a different routing protocols. This is to provide a reason for having a not-so-stubby OSPF area in the network.
 
 <br>
 
