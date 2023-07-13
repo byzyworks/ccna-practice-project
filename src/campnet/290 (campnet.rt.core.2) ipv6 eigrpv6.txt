@@ -1,4 +1,0 @@
-ipv6 router eigrp 100
-eigrp router-id 2.2.2.2
-no shutdown
-exit
