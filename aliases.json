@@ -101,38 +101,75 @@
 	],
 	[
 		"meshnet.rt.core.1",
-		"all.rt.2911"
+		"meshnet.rt.ospf",
+		"all.rt.2911",
+		"not-isp"
 	],
 	[
 		"meshnet.rt.core.2",
-		"all.rt.2911"
+		"meshnet.rt.ospf",
+		"all.rt.2911",
+		"not-isp"
 	],
 	[
 		"meshnet.rt.mesh.1",
-		"all.rt.2911"
+		"meshnet.rt.ospf",
+		"all.rt.2911",
+		"not-isp"
 	],
 	[
 		"meshnet.rt.mesh.2",
-		"all.rt.2911"
+		"meshnet.rt.ospf",
+		"all.rt.2911",
+		"not-isp"
 	],
 	[
 		"meshnet.rt.mesh.3",
-		"all.rt.2911"
+		"meshnet.rt.ospf",
+		"all.rt.2911",
+		"not-isp"
 	],
 	[
 		"meshnet.rt.mesh.4",
-		"all.rt.2911"
+		"meshnet.rt.ospf",
+		"all.rt.2911",
+		"not-isp"
 	],
 	[
 		"meshnet.rt.mesh.5",
-		"all.rt.2911"
+		"meshnet.rt.ospf",
+		"all.rt.2911",
+		"not-isp"
 	],
 	[
 		"meshnet.rt.mesh.6",
-		"all.rt.2911"
+		"meshnet.rt.ospf",
+		"all.rt.2911",
+		"not-isp"
 	],
 	[
 		"meshnet.rt.mesh.7",
-		"all.rt.2911"
+		"meshnet.rt.ospf",
+		"meshnet.rt.eigrp",
+		"all.rt.2911",
+		"not-isp"
+	],
+	[
+		"meshnet.rt.mesh.8",
+		"meshnet.rt.ospf",
+		"all.rt.2911",
+		"not-isp"
+	],
+	[
+		"meshnet.rt.mesh.9",
+		"meshnet.rt.ospf",
+		"all.rt.2911",
+		"not-isp"
+	],
+	[
+		"meshnet.rt.spec.1",
+		"meshnet.rt.eigrp",
+		"all.rt.2911",
+		"not-isp"
 	]
 ]

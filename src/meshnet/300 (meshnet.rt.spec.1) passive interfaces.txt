@@ -1,0 +1,3 @@
+ipv6 router eigrp 100
+passive-interface GigabitEthernet0/1
+exit
