@@ -2,23 +2,23 @@ interface GigabitEthernet 0/0
 description "WAN interface"
 ip address 123.45.67.69 255.255.255.240
 ipv6 enable
-ipv6 address 2001:627c:96cc:4fc8:f322:6103:e152:1b84/64
-ipv6 address fe80::955b:d9db:5201:c644 link-local
+ipv6 address 2001:627c:96cc:4fc8:ea17:df37:b1a7:f884/64
+ipv6 address fe80::e81f:9fa1:d664:02d8 link-local
 no shutdown
 exit
 
 interface GigabitEthernet 0/1
-ip address 10.0.0.5 255.255.255.252
+ip address 10.0.0.9 255.255.255.252
 ipv6 enable
-ipv6 address 2001:627c:96cc:3a89:b4d8:873f:5aa9:4967/64
-ipv6 address fe80::fc0a:8c41:8f0f:2312 link-local
+ipv6 address 2001:627c:96cc:597e:abbc:0c8e:b597:7cf2/64
+ipv6 address fe80::4890:a434:dd59:d13c link-local
 no shutdown
 exit
 
 interface GigabitEthernet 0/2
-ip address 10.0.3.1 255.255.255.252
+ip address 10.0.0.13 255.255.255.252
 ipv6 enable
-ipv6 address 2001:627c:96cc:f465:842a:2ae2:50f8:d5bf/64
-ipv6 address fe80::bf65:089e:c675:7e24 link-local
+ipv6 address 2001:627c:96cc:3a89:f322:6103:e152:1b84/64
+ipv6 address fe80::955b:d9db:5201:c644 link-local
 no shutdown
 exit
