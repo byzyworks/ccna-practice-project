@@ -293,6 +293,7 @@ None is currently provided beyond appropriate routing and zoning practices. Ther
 * Dynamic ARP Inspection / DHCP Snooping
 * Email (SMTP + POP3). To be added to `intz-sv-1`.
 * VOIP
+* Change out EUI-64 auto-generated link-local IPv6 addresses on non-Cisco devices with custom random ones (better security, plus Cisco devices already have them)
 
 <br>
 
