@@ -1,0 +1,15 @@
+router ospf 1
+redistribute eigrp 100
+exit
+
+ipv6 router ospf 1
+redistribute eigrp 100
+exit
+
+router eigrp 100
+redistribute ospf 1
+exit
+
+ipv6 router eigrp 100
+redistribute ospf 1
+exit

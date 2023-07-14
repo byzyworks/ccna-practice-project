@@ -1,8 +1,8 @@
 router eigrp 100
 network 10.0.4.0 0.0.0.255
+network 10.1.2.0 0.0.0.255
 redistribute static metric 100000 0 255 1 1500
 no auto-summary
-no shutdown
 exit
 
 ipv6 router eigrp 100
