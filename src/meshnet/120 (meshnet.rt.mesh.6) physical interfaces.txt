@@ -1,5 +1,5 @@
 interface GigabitEthernet 0/0
-ip address 10.0.3.3 255.255.255.252
+ip address 10.0.3.2 255.255.255.252
 ipv6 enable
 ipv6 address 2001:627c:96cc:97a5:3dfa:6bc2:b35e:e527/64
 ipv6 address fe80::81ba:d5b0:6281:99bd link-local
