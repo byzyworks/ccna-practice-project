@@ -1,1 +1,0 @@
-hostname spec-rt-1

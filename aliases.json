@@ -144,13 +144,13 @@
 	[
 		"meshnet.rt.mesh.6",
 		"meshnet.rt.ospf",
+		"meshnet.rt.eigrp",
 		"all.rt.2911",
 		"not-isp"
 	],
 	[
 		"meshnet.rt.mesh.7",
 		"meshnet.rt.ospf",
-		"meshnet.rt.eigrp",
 		"all.rt.2911",
 		"not-isp"
 	],
@@ -162,14 +162,13 @@
 	],
 	[
 		"meshnet.rt.mesh.9",
-		"meshnet.rt.ospf",
+		"meshnet.rt.eigrp",
 		"all.rt.2911",
 		"not-isp"
 	],
 	[
-		"meshnet.rt.spec.1",
-		"meshnet.rt.eigrp",
-		"all.rt.2911",
+		"meshnet.sw.mesh.1",
+		"all.sw.c2960",
 		"not-isp"
 	]
 ]

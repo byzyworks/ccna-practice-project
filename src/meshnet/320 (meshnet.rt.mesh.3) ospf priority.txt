@@ -1,0 +1,4 @@
+interface GigabitEthernet 0/1
+ip ospf priority 200
+ipv6 ospf priority 200
+exit

@@ -1,0 +1,13 @@
+interface FastEthernet 0/1
+switchport mode access
+no switchport port-security
+no switchport port-security mac-address sticky
+no shutdown
+exit
+
+interface range GigabitEthernet 0/1 - 2
+switchport mode access
+no switchport port-security
+no switchport port-security mac-address sticky
+no shutdown
+exit
