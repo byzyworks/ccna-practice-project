@@ -1,8 +1,8 @@
 ! Note about loopbacks: on an ABR, these get placed with the lowest area number the ABR is a part of.
 
 router ospf 1
-auto-cost reference-bandwidth 100000
-log-adjacency-changes
+network 10.0.3.0 0.0.0.255 area 3
+network 10.1.1.0 0.0.0.255 area 3
 exit
 
 ipv6 router ospf 1

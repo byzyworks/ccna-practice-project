@@ -101,62 +101,68 @@
 	],
 	[
 		"meshnet.rt.core.1",
-		"meshnet.rt.ospf",
+		"meshnet.rt.ospf.area-0",
 		"all.rt.2911",
 		"not-isp"
 	],
 	[
 		"meshnet.rt.core.2",
-		"meshnet.rt.ospf",
+		"meshnet.rt.ospf.area-0",
 		"all.rt.2911",
 		"not-isp"
 	],
 	[
 		"meshnet.rt.mesh.1",
-		"meshnet.rt.ospf",
+		"meshnet.rt.ospf.area-0.border",
+		"meshnet.rt.ospf.area-1.border",
 		"all.rt.2911",
 		"not-isp"
 	],
 	[
 		"meshnet.rt.mesh.2",
-		"meshnet.rt.ospf",
+		"meshnet.rt.ospf.area-0.border",
+		"meshnet.rt.ospf.area-2.border",
 		"all.rt.2911",
 		"not-isp"
 	],
 	[
 		"meshnet.rt.mesh.3",
-		"meshnet.rt.ospf",
+		"meshnet.rt.ospf.area-0.border",
+		"meshnet.rt.ospf.area-3.border",
 		"all.rt.2911",
 		"not-isp"
 	],
 	[
 		"meshnet.rt.mesh.4",
-		"meshnet.rt.ospf",
+		"meshnet.rt.ospf.area-1",
 		"all.rt.2911",
 		"not-isp"
 	],
 	[
 		"meshnet.rt.mesh.5",
+		"meshnet.rt.ospf.area-2",
 		"meshnet.rt.ospf",
 		"all.rt.2911",
 		"not-isp"
 	],
 	[
 		"meshnet.rt.mesh.6",
-		"meshnet.rt.ospf",
+		"meshnet.rt.ospf.area-1.border",
+		"meshnet.rt.ospf.area-4.border",
 		"meshnet.rt.eigrp",
 		"all.rt.2911",
 		"not-isp"
 	],
 	[
 		"meshnet.rt.mesh.7",
-		"meshnet.rt.ospf",
+		"meshnet.rt.ospf.area-1.border",
+		"meshnet.rt.ospf.area-3.border",
 		"all.rt.2911",
 		"not-isp"
 	],
 	[
 		"meshnet.rt.mesh.8",
-		"meshnet.rt.ospf",
+		"meshnet.rt.ospf.area-3",
 		"all.rt.2911",
 		"not-isp"
 	],
