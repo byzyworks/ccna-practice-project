@@ -1,0 +1,15 @@
+router ospf 1
+redistribute eigrp 100 subnets
+exit
+
+ipv6 router ospf 1
+redistribute eigrp 100 subnets
+exit
+
+router eigrp 100
+redistribute ospf 1 metric 100000 0 255 1 1500
+exit
+
+ipv6 router eigrp 100
+redistribute ospf 1 metric 100000 0 255 1 1500
+exit

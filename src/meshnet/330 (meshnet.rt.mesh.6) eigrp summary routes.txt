@@ -1,0 +1,4 @@
+interface GigabitEthernet 0/0
+ip summary-address eigrp 100 10.0.4.0 255.255.255.0 100
+ip summary-address eigrp 100 10.1.2.0 255.255.255.0 100
+exit

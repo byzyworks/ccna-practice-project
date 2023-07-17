@@ -101,13 +101,13 @@
 	],
 	[
 		"meshnet.rt.core.1",
-		"meshnet.rt.ospf.area-0",
+		"meshnet.rt.ospf.area-0.border",
 		"all.rt.2911",
 		"not-isp"
 	],
 	[
 		"meshnet.rt.core.2",
-		"meshnet.rt.ospf.area-0",
+		"meshnet.rt.ospf.area-0.border",
 		"all.rt.2911",
 		"not-isp"
 	],
@@ -141,14 +141,13 @@
 	[
 		"meshnet.rt.mesh.5",
 		"meshnet.rt.ospf.area-2",
-		"meshnet.rt.ospf",
 		"all.rt.2911",
 		"not-isp"
 	],
 	[
 		"meshnet.rt.mesh.6",
 		"meshnet.rt.ospf.area-1.border",
-		"meshnet.rt.ospf.area-4.border",
+		"meshnet.rt.ospf.border.eigrp",
 		"meshnet.rt.eigrp",
 		"all.rt.2911",
 		"not-isp"

@@ -2,8 +2,12 @@
 
 router ospf 1
 auto-cost reference-bandwidth 100000
+redistribute static metric 1 subnets
 log-adjacency-changes
 exit
 
 ipv6 router ospf 1
+auto-cost reference-bandwidth 100000
+redistribute static metric 1
+log-adjacency-changes
 exit
