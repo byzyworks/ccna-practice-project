@@ -4,5 +4,5 @@
 ! Therefore, these devices are given manual static default routes as a workaround.
 ! On the plus side, it gets to demonstrate creating "backup" static routes by manipulating administrative distance.
 
-ip route 0.0.0.0 0.0.0.0 10.0.1.5 100
-ip route 0.0.0.0 0.0.0.0 10.0.1.14 110
+ip route 0.0.0.0 0.0.0.0 10.1.1.5 100
+ip route 0.0.0.0 0.0.0.0 10.1.1.14 110

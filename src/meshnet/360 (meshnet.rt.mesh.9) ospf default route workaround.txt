@@ -3,4 +3,4 @@
 ! area # nssa default-information originate
 ! Therefore, these devices are given manual static default routes as a workaround.
 
-ip route 0.0.0.0 0.0.0.0 10.0.4.1
+ip route 0.0.0.0 0.0.0.0 10.4.1.1

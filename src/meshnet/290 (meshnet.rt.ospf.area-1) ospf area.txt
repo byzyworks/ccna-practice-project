@@ -2,12 +2,7 @@
 
 router ospf 1
 area 1 nssa
-network 10.0.1.0 0.0.0.255 area 1
-network 10.1.2.0 0.0.0.255 area 1
-network 172.16.0.3 0.0.0.0 area 1
-network 172.16.0.6 0.0.0.0 area 1
-network 172.16.0.8 0.0.0.0 area 1
-network 172.16.0.9 0.0.0.0 area 1
+network 10.1.0.0 0.0.255.255 area 1
 exit
 
 ipv6 router ospf 1

@@ -1,7 +1,7 @@
 ! Note about loopbacks: on an ABR, these get placed with the lowest area number the ABR is a part of.
 
 router ospf 1
-area 0 range 10.0.0.0 255.255.255.0
+area 0 range 10.0.0.0 255.255.0.0
 exit
 
 ipv6 router ospf 1

@@ -1,5 +1,5 @@
 interface loopback 0
-ip address 172.16.0.2 255.255.240.0
+ip address 10.0.0.2 255.255.255.0
 ipv6 enable
 ipv6 address fd4d:bcbf:c0d7:72b0:af99:3b51:7937:74c0/64
 ipv6 address fe80::e1ac:a505:5235:aa90 link-local

@@ -1,5 +1,5 @@
 interface GigabitEthernet 0/0
-ip address 10.0.4.2 255.255.255.252
+ip address 10.4.1.2 255.255.255.252
 ipv6 enable
 ipv6 address 2001:627c:96cc:b5a3:cba9:ee96:e516:6ec1/64
 ipv6 address fe80::0bbb:24a3:6bca:8d0a link-local
@@ -8,7 +8,7 @@ exit
 
 interface GigabitEthernet 0/1
 description "mesh-sv-2 interface"
-ip address 10.1.2.1 255.255.255.252
+ip address 10.4.2.1 255.255.255.252
 ipv6 enable
 ipv6 address 2001:627c:96cc:70b7:2679:fe42:3e5a:166b/64
 ipv6 address fe80::9d62:16b0:05f0:d5d8 link-local

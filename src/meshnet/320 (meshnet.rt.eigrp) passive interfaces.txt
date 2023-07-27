@@ -1,3 +1,4 @@
 router eigrp 100
 passive-interface Loopback0
+passive-interface Loopback1
 exit
