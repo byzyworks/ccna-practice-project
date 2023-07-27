@@ -303,9 +303,11 @@ None is currently provided beyond appropriate routing and zoning practices. Ther
 
 ![MeshNet Network](img/meshnet.png)
 
-MeshNet is the third network implemented for this project. It is currently a work-in-progress.
+MeshNet is the third network implemented for this project.
 
-MeshNet is simply a multi-area OSPF web of (2911 ISR) routers that has a relatively random configuration (meaning without rhyme or reason). This network is purely for practicing with multi-area OSPF using a relatively complex configuration of router that wouldn't be practical to implement in any of the other sub-networks.
+MeshNet is simply a multi-area OSPF web of (2911 ISR) routers that has a relatively random configuration (meaning without rhyme or reason). This network is purely for practicing with multi-area OSPF using a relatively complex configuration of routers that wouldn't be practical to implement in any of the other sub-networks.
+
+Admittedly, the design for MeshNet is not practical in general. Most of this is a consequence of its early design, which like the others was attempting to invoke as many concepts as possible without complete understanding of those concepts (on the other hand, it might have *really* got me to try to understand them because of all the troubleshooting involved).
 
 <div id="meshnet-l2"/>
 
@@ -325,7 +327,13 @@ There are no wireless configurations for MeshNet.
 
 WIP
 
-MeshNet implements an IPv4 + IPv6 dual stack configuration, using standard OSPF for IPv4 and OSPFv6 for IPv6.
+MeshNet implements an IPv4 + IPv6 dual stack configuration, using standard OSPF for IPv4 and OSPFv3 for IPv6. The OSPF AS is separated into 4 areas in total, including backbone area 0, and three areas extending out from it in a hub-and-spoke fashion (with the exception being that one ABR, `mesh-rt-7`, connects areas 1 and 3 directly, however while being disabled until design difficulties related to it can be resolved). All areas except area 1 are standard stub areas that only pass a single default route instead of ASBR-external routes like the default routes originating from `core-rt-1` and `core-rt-2` (since the other areas are all connected to the backbone by one router, and do not pass their own external information, this is of mostly no effect). All areas must be able to exchange type 3 inter-area routes to be reachable elsewhere in the network, hence why none of them happen to be configured as totally-stubby.
+
+Area 1, however, is configured as not-so-stubby. Each area has at least one server or client node at each end, and the server connected to area 1 is connected to it over a separate EIGRP-based autonomous system, which itself is connected to the main OSPF autonomous system containing the 4 areas. Both are set to redistribute routes with each other, and the configuration of area 1 as an NSSA ensures that the EIGRP-redistributed routes are able to propagate inside the same area as type 7 LSAs, and finally as type 5 LSAs when they reach backbone area 0 (still reachable from areas 2 and 3 via. default route, without propagating directly into them).
+
+The loopback addresses of each router in the sub-network are also propagated throughout.
+
+The IPv6 configuration is a work-in-progress.
 
 <div id="meshnet-apps"/>
 
@@ -345,8 +353,9 @@ WIP
 
 ### WIP
 
-* OSPF routing configurations
-* ASBR example. For this, a new "sub-subnetwork" would be appended running a different routing protocols. This is to provide a reason for having a not-so-stubby OSPF area in the network.
+* Totally-Stubby Area(s)
+* DR-BDR Examples (only one 'out-of-order' while mesh-rt-7 is figured out)
+* DHCP Relay
 
 <br>
 

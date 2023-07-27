@@ -1,8 +1,11 @@
 ! Note about loopbacks: on an ABR, these get placed with the lowest area number the ABR is a part of.
 
 router ospf 1
+area 2 stub
 network 10.0.2.0 0.0.0.255 area 2
 network 10.2.1.0 0.0.0.255 area 2
+network 172.16.0.4 0.0.0.0 area 2
+network 172.16.0.7 0.0.0.0 area 2
 exit
 
 ipv6 router ospf 1
