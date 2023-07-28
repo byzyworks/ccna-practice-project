@@ -1,7 +1,7 @@
 interface loopback 0
 ip address 10.4.0.2 255.255.255.0
 ipv6 enable
-ipv6 address fd4d:bcbf:c0d7:72b0:cf63:0e19:6338:5a38/64
+ipv6 address fd4d:bcbf:c0d7:c1fe:cf63:0e19:6338:5a38/64
 ipv6 address fe80::ab4c:a221:6caa:47d2 link-local
 no shutdown
 exit

@@ -1,14 +1,3 @@
-3a81:7a72:eaac:c1fe
-3dfa:6bc2:b35e:e527
-81ba:d5b0:6281:99bd
-e4b0:4c11:fbc4:25b1
-d2a4:990b:4f4c:d6ad
-9bcf:bd76:cc65:7a60
-bb8b:f3e8:eed5:1dfb
-e3bc:f4bc:921c:b276
-96a7:9ded:fb11:4352
-ada3:74af:8cb5:4e35
-98fc:989c:2fc8:111e
 65fa:1872:534b:ac3c
 eb8c:4a3c:f732:272d
 652a:3370:2699:cfec

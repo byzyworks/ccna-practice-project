@@ -8,5 +8,8 @@ exit
 
 interface loopback 1
 ip address 10.3.0.1 255.255.255.0
+ipv6 enable
+ipv6 address fd4d:bcbf:c0d7:eaac:9bcf:bd76:cc65:7a60/64
+ipv6 address fe80::bb8b:f3e8:eed5:1dfb link-local
 no shutdown
 exit
