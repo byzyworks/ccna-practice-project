@@ -1,22 +1,23 @@
 ip access-list extended WAN_IN_v4
 remark For all of the DMZ services
-permit tcp any host 10.0.10.20 eq 53
-permit tcp any host 10.0.10.20 eq 80
-permit tcp any host 10.0.10.20 eq 443
-remark Allow pinging main-sv-1 from outside
-permit icmp any host 10.0.10.20
+permit tcp any host 123.45.67.88 eq 53
+permit tcp any host 123.45.67.88 eq 80
+permit tcp any host 123.45.67.88 eq 443
+remark Allow pinging pubz-sv-1 from outside
 permit icmp any 123.45.67.88 0.0.0.3
 exit
 
 ip access-list extended WAN_OUT_v4
-remark Unfortunately, Packet Tracer seems to have no concept of a forward proxy
+remark Unfortunately, Packet Tracer seems to have no concept of a forward proxy, so we're stuck with default-allow for internet
 permit ip any any
 exit
 
 ipv6 access-list WAN_IN_v6
+remark WIP
 exit
 
 ipv6 access-list WAN_OUT_v6
+remark WIP
 exit
 
 ip access-list extended Admin_IN_v4
@@ -27,12 +28,28 @@ ip access-list extended Admin_OUT_v4
 permit ip any any
 exit
 
+ipv6 access-list Admin_IN_v6
+remark WIP
+exit
+
+ipv6 access-list Admin_OUT_v6
+remark WIP
+exit
+
 ip access-list extended Public_IN_v4
 permit ip any any
 exit
 
 ip access-list extended Public_OUT_v4
 permit ip any any
+exit
+
+ipv6 access-list Public_IN_v6
+remark WIP
+exit
+
+ipv6 access-list Public_OUT_v6
+remark WIP
 exit
 
 ip access-list extended Internal_IN_v4
@@ -51,19 +68,37 @@ ip access-list extended Internal_OUT_v4
 permit ip any any
 exit
 
+ipv6 access-list Internal_IN_v6
+remark WIP
+exit
+
+ipv6 access-list Internal_OUT_v6
+remark WIP
+exit
+
 ip access-list extended WLANManage_IN_v4
-remark Required for EIGRP to work
-permit eigrp any host 224.0.0.10
-remark Required for HSRP to work
-permit udp any host 224.0.0.2 eq 1985
-remark Communications on this VLAN are normally between the WLC and other APs
-permit ip any 10.0.12.0 0.0.0.255
-remark Administrative access is still relevant
-permit ip any 10.0.6.0 0.0.0.255
+remark An unfortunate consequence of WLAN VLAN tagging not working in Cisco PT, forcing wireless traffic to a single VLAN, management or otherwise
+permit ip any any
+! remark Required for EIGRP to work
+! permit eigrp any host 224.0.0.10
+! remark Required for HSRP to work
+! permit udp any host 224.0.0.2 eq 1985
+! remark Communications on this VLAN are normally between the WLC and other APs
+! permit ip any 10.0.12.0 0.0.0.255
+! remark Administrative access is still relevant
+! permit ip any 10.0.6.0 0.0.0.255
 exit
 
 ip access-list extended WLANManage_OUT_v4
 permit ip any any
+exit
+
+ipv6 access-list WLANManage_IN_v6
+remark WIP
+exit
+
+ipv6 access-list WLANManage_OUT_v6
+remark WIP
 exit
 
 ip access-list extended CorpoLAN_IN_v4
@@ -74,18 +109,37 @@ ip access-list extended CorpoLAN_OUT_v4
 permit ip any any
 exit
 
+ipv6 access-list CorpoLAN_IN_v6
+remark WIP
+exit
+
+ipv6 access-list CorpoLAN_OUT_v6
+remark WIP
+exit
+
 ip access-list extended GuestLAN_IN_v4
-remark Allow same subnet access (layer 2 isolation elsewhere)
-permit ip any 10.0.14.0 0.0.0.255
-remark Guest LAN should not have access to intranet, only internet
-deny ip any 10.0.0.0 0.255.255.255
-deny ip any 172.16.0.0 0.15.255.255
-deny ip any 192.168.0.0 0.0.255.255
-permit ip any any
+remark Not in use
+remark An unfortunate consequence of WLAN VLAN tagging not working in Cisco PT, forcing wireless traffic to a single VLAN, management or otherwise
+! remark Allow same subnet access (layer 2 isolation elsewhere)
+! permit ip any 10.0.14.0 0.0.0.255
+! remark Guest LAN should not have access to intranet, only internet
+! deny ip any 10.0.0.0 0.255.255.255
+! deny ip any 172.16.0.0 0.15.255.255
+! deny ip any 192.168.0.0 0.0.255.255
+! permit ip any any
 exit
 
 ip access-list extended GuestLAN_OUT_v4
-permit ip any any
+remark Not in use
+remark An unfortunate consequence of WLAN VLAN tagging not working in Cisco PT, forcing wireless traffic to a single VLAN, management or otherwise
+exit
+
+ipv6 access-list GuestLAN_IN_v6
+remark WIP
+exit
+
+ipv6 access-list GuestLAN_OUT_v6
+remark WIP
 exit
 
 ip access-list extended Lab_IN_v4
@@ -102,6 +156,46 @@ exit
 
 ip access-list extended Lab_OUT_v4
 permit ip any any
+exit
+
+ipv6 access-list Lab_IN_v6
+remark WIP
+exit
+
+ipv6 access-list Lab_OUT_v6
+remark WIP
+exit
+
+ip access-list extended VOIP_IN_v4
+remark Not in use
+exit
+
+ip access-list extended VOIP_OUT_v4
+remark Not in use
+exit
+
+ipv6 access-list VOIP_IN_v6
+remark Not in use
+exit
+
+ipv6 access-list VOIP_OUT_v6
+remark Not in use
+exit
+
+ip access-list extended Default_IN_v4
+remark Not in use
+exit
+
+ip access-list extended Default_OUT_v4
+remark Not in use
+exit
+
+ipv6 access-list Default_IN_v6
+remark Not in use
+exit
+
+ipv6 access-list Default_OUT_v6
+remark Not in use
 exit
 
 interface GigabitEthernet 0/0
@@ -158,4 +252,18 @@ ip access-group Lab_IN_v4 in
 ip access-group Lab_OUT_v4 out
 ipv6 traffic-filter Lab_IN_v6 in
 ipv6 traffic-filter Lab_OUT_v6 out
+exit
+
+interface GigabitEthernet 0/2.160
+ip access-group VOIP_IN_v4 in
+ip access-group VOIP_OUT_v4 out
+ipv6 traffic-filter VOIP_IN_v6 in
+ipv6 traffic-filter VOIP_OUT_v6 out
+exit
+
+interface GigabitEthernet 0/2.999
+ip access-group Default_IN_v4 in
+ip access-group Default_OUT_v4 out
+ipv6 traffic-filter Default_IN_v6 in
+ipv6 traffic-filter Default_OUT_v6 out
 exit
